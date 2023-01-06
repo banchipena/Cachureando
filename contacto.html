@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Cachureando</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="titulo">
+    <h1>Cachureando</h1>
+
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="#">SOBRE NOSOTROS</a></li>
+        <li><a href="#">SERVICIOS</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+      </ul>
+
+      <div class="menu_select">
+        <div id="selectme"></div>
+        <span id="arrow" class="down"></span>
+        <ul id="options">
+          <br />
+          <br />
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="#">SOBRE NOSOTROS</a></li>
+          <li><a href="#">SERVICIOS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container">
+    <article class="post">
+      <center>
+        <h1>Formulario de Contacto</h1>
+      </center>
+      <br />
+      <center>
+        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" />
+        <br /><br />
+        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" />
+        <br /><br />
+        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" />
+        <br /><br />
+        <textarea name="comentario" id="comentario" placeholder="Ingrese comentario" cols="30" rows="10"></textarea>
+        <br /><br />
+        <input class="botons" type="submit" value="Enviar" />
+      </center>
+    </article>
+  </section>
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+  <footer>
+    <section>
+      <a href="#titulo">Ir al comienzo</a>
+    </section>
+
+    <p>Copyright 2022 | Francisco Gómez - Iván Peña</p>
+  </footer>
+</body>
+
+</html>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#selectme").on("click", function () {
+      if ($("ul#options").is(":hidden")) {
+        $("ul#options").show();
+        $("#arrow").removeClass("down");
+        $("#arrow").addClass("up");
+      } else {
+        $("ul#options").hide();
+        $("#arrow").removeClass("up");
+        $("#arrow").addClass("down");
+      }
+    });
+
+    $("#arrow").on("click", function () {
+      if ($(this).hasClass("down")) {
+        $("ul#options").show();
+        $(this).removeClass("down");
+        $(this).addClass("up");
+      } else {
+        $("ul#options").hide();
+        $(this).removeClass("up");
+        $(this).addClass("down");
+      }
+    });
+
+    $("#options li a").on("click", function () {
+      var value = $(this).text();
+      $("#selectme").text(value);
+      $("ul#options").hide();
+    });
+  });
+</script>

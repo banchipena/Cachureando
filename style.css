@@ -221,6 +221,16 @@ ul#options li:hover {
     width:25px;
 }
 
+#comentario {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#palabraComentario {
+    text-align:left;
+    float:left;
+    margin: 0px;
+}
+
 
 @media only screen and (max-width: 980px) {
 nav ul { display: none; }

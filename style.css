@@ -31,12 +31,12 @@ nav {
   nav ul li {
     float: left;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   nav ul li a {
     display: block;
-    padding: 10px;
+    padding: 100px;
     color: #fff;
     text-decoration: none;
   }
@@ -45,7 +45,7 @@ nav {
 section article {
     transition: box-shadow 0.3s ease;
     background-color: #fff;
-    margin: 1rem 0;
+    margin: 2rem 0;
     border-radius: 0.5rem;
     padding: 0.25rem 0;
     cursor: pointer;
@@ -60,7 +60,7 @@ section article h2, section article p {
 }
 
 .titulillo{
-    font-size: 7vw;;
+    font-size: 7vw;
 }
 .container {
     width: 400px;
@@ -78,7 +78,7 @@ section article h2, section article p {
     margin: auto;
     justify-content: space-around;
     flex-wrap: wrap;
-    border-radius:3px;
+    border-radius: 3px;
 }
 
 .contenedor-imagenes .imagen{
@@ -93,7 +93,6 @@ section article h2, section article p {
     height:100%;
     object-fit: cover;
 }
-
 
 footer {
     background-color: #222;
@@ -202,7 +201,7 @@ ul#options li:hover {
 
 #arrow {
     position: absolute;
-    left: 300px;
+    left: 290px;
     top: 12px;
     cursor: pointer;
 }
@@ -227,7 +226,7 @@ ul#options li:hover {
 
 #palabraComentario {
     text-align:left;
-    float:left;
+    float: center;
     margin: 0px;
 }
 
